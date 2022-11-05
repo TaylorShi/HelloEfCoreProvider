@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TeslaOrder.Domain\TeslaOrder.Domain.csproj" />
+    <ProjectReference Include="..\TeslaOrder.Infrastructure\TeslaOrder.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
