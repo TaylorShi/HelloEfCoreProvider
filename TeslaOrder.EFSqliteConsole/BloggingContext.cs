@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TeslaOrder.EFSqliteConsole.Domain;
+using TeslaOrder.Domain.AggregatesModel;
 
 namespace TeslaOrder.EFSqliteConsole
 {

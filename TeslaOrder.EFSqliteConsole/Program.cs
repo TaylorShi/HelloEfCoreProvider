@@ -1,5 +1,7 @@
-﻿using System;
-using TeslaOrder.EFSqliteConsole.Domain;
+﻿using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace TeslaOrder.EFSqliteConsole
 {
@@ -7,24 +9,20 @@ namespace TeslaOrder.EFSqliteConsole
     {
         static void Main(string[] args)
         {
-            using (var db = new BloggingContext())
+            var folder = Environment.SpecialFolder.MyDocuments;
+            var path = Environment.GetFolderPath(folder);
+            var DbPath = System.IO.Path.Join(path, "postting.db");
+
+            var services = new ServiceCollection();
+            services.AddDbContext<PosttingContext>(opt => opt.UseSqlite($"Data Source={DbPath};Password=BkBqwG3ps25qQExj;"));
+
+            using (var scope = services.BuildServiceProvider().CreateScope())
             {
-                Console.WriteLine("Ensure Database Created");
-
-                db.Database.EnsureCreated();
-
-                Console.WriteLine($"DbPath:{db.DbPath}");
-
-                Console.WriteLine("Inserting a new blog");
-                var blog = new Blog
-                {
-                    BlogId = 16839191,
-                    Url = "https://www.cnblogs.com/taylorshi/p/16839191.html"
-                };
-                db.Add(blog);
-                db.SaveChanges();
+                var context = scope.ServiceProvider.GetService<PosttingContext>();
+                context.Database.EnsureDeleted();
+                context.Database.EnsureCreated();
             }
-            Console.WriteLine("Hello World!");
+
             Console.ReadKey();
         }
     }

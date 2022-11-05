@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TeslaOrder.EFSqliteConsole.Domain
+namespace TeslaOrder.Domain.AggregatesModel
 {
     public class Blog
     {
