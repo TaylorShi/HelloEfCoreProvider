@@ -11,7 +11,7 @@ namespace TeslaOrder.EFCosmosConsole
     {
         static void Main(string[] args)
         {
-            var connectionString = "AccountEndpoint=https://qllskyui4.documents.azure.com:443/;AccountKey=U9IGv6MhVckDTP84jxNviZLFwtc9RDJ1i1fppRTDGNlUFYU9lbHgWw3FTLNzQB1IDm1DZ5VGHZQwACDbS4IgGA==;";
+            var connectionString = "AccountEndpoint=https://xxxxxx.documents.azure.com:443/;AccountKey=xxxxxxxxxxxxxxxxxxxxxxxxxxxQB1IDm1DZ5VGHZQwACDbS4IgGA==;";
             var databaseName = "EFCosmosConsole";
             var services = new ServiceCollection();
             services.AddDbContext<BloggingContext>(opt => opt.UseCosmos(connectionString, databaseName));
