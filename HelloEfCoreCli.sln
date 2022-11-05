@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLite", "SQLite", "{BDCC7E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLServer", "SQLServer", "{C8CC07A3-B70D-4EA3-B983-1F01D271CE5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeslaOrder.EFSqlServerConsole", "TeslaOrder.EFSqlServerConsole\TeslaOrder.EFSqlServerConsole.csproj", "{B2855574-4C78-42BC-BC92-A0ADB2FB53F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{F8423FDA-D677-4F9F-B70B-9B4C2699FB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8423FDA-D677-4F9F-B70B-9B4C2699FB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8423FDA-D677-4F9F-B70B-9B4C2699FB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2855574-4C78-42BC-BC92-A0ADB2FB53F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2855574-4C78-42BC-BC92-A0ADB2FB53F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2855574-4C78-42BC-BC92-A0ADB2FB53F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2855574-4C78-42BC-BC92-A0ADB2FB53F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{CD2FD752-3D61-4A1E-86F1-67FDBF61E09F} = {2DD8F75F-C171-4CC4-86B9-CCE97D2E9C29}
 		{7FF588DE-60E9-4D37-A7F2-9A7076935FE1} = {BDCC7EE6-4AEB-45C1-9425-A2038A75162B}
 		{F8423FDA-D677-4F9F-B70B-9B4C2699FB2B} = {2DD8F75F-C171-4CC4-86B9-CCE97D2E9C29}
+		{B2855574-4C78-42BC-BC92-A0ADB2FB53F1} = {C8CC07A3-B70D-4EA3-B983-1F01D271CE5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {02344C64-C30F-4576-81E2-397296BD0D6C}

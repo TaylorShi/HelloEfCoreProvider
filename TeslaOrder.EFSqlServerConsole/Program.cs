@@ -1,23 +1,19 @@
-﻿using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using TeslaOrder.Domain.AggregatesModel;
 using TeslaOrder.Infrastructure.Contexts;
 
-namespace TeslaOrder.EFSqliteConsole
+namespace TeslaOrder.EFSqlServerConsole
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var folder = Environment.SpecialFolder.MyDocuments;
-            var path = Environment.GetFolderPath(folder);
-            var DbPath = System.IO.Path.Join(path, "EFSqliteConsole.db");
-
+            var connectionString = "Server=tcp:localhost,1433;Database=TeslaOrder.EFSqlServerConsole;User Id=sa;Password=beE#Yahlj!Sdgj6x;";
             var services = new ServiceCollection();
-            services.AddDbContext<BloggingContext>(opt => opt.UseSqlite($"Data Source={DbPath}"));
+            services.AddDbContext<BloggingContext>(opt => opt.UseSqlServer(connectionString));
 
             using (var scope = services.BuildServiceProvider().CreateScope())
             {
@@ -27,7 +23,6 @@ namespace TeslaOrder.EFSqliteConsole
 
                 var blog = new Blog
                 {
-                    BlogId = new Random(16839191).Next(),
                     Url = "https://www.cnblogs.com/taylorshi/p/16843914.html"
                 };
                 context.Add(blog);
