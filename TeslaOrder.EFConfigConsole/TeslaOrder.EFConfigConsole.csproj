@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TeslaOrder.Domain\TeslaOrder.Domain.csproj" />
+    <ProjectReference Include="..\TeslaOrder.Infrastructure\TeslaOrder.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using TeslaOrder.Infrastructure.Contexts;
 
 namespace TeslaOrder.EFConfigConsole
 {

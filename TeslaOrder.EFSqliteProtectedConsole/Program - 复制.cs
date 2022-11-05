@@ -9,7 +9,7 @@ namespace TeslaOrder.EFSqliteProtectedConsole
         {
             var folder = Environment.SpecialFolder.MyDocuments;
             var path = Environment.GetFolderPath(folder);
-            var dbPath = System.IO.Path.Join(path, "postting.db");
+            var dbPath = System.IO.Path.Join(path, "blog.db");
             var baseConnectionString = $"Data Source={dbPath}";
 
             var oldPassword = "BkBqwG3ps25qQExj";

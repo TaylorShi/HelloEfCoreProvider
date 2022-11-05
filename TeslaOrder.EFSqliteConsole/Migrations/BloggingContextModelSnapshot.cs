@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TeslaOrder.EFSqliteConsole;
+using TeslaOrder.Infrastructure.Contexts;
 
 namespace TeslaOrder.EFSqliteConsole.Migrations
 {
